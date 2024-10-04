@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.kirurobo.uniwinc": {
+      "version": "https://github.com/kirurobo/UniWindowController.git#upm",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "185dd1b2e73f7ba0708b9532668133bb97908ed1"
+    },
     "com.unity.collab-proxy": {
       "version": "2.5.2",
       "depth": 0,
