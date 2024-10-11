@@ -1,8 +1,14 @@
 {
   "dependencies": {
     "com.kirurobo.uniwinc": "https://github.com/kirurobo/UniWindowController.git#upm",
+    "com.unity.2d.pixel-perfect": "5.0.3",
+    "com.unity.2d.sprite": "1.0.0",
+    "com.unity.2d.tilemap": "1.0.0",
+    "com.unity.2d.tilemap.extras": "3.1.2",
+    "com.unity.cinemachine": "2.10.1",
     "com.unity.collab-proxy": "2.5.2",
     "com.unity.feature.development": "1.0.1",
+    "com.unity.postprocessing": "3.4.0",
     "com.unity.textmeshpro": "3.0.6",
     "com.unity.timeline": "1.7.6",
     "com.unity.ugui": "1.0.0",
