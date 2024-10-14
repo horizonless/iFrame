@@ -6,7 +6,7 @@ using MoreMountains.CorgiEngine;
 using MoreMountains.Tools;
 using UnityEngine;
 
-public class iFrameGameManager : MMPersistentSingleton<MMSoundManager>, 
+public class iFrameGameManager : MonoBehaviour, 
     MMEventListener<MMCharacterEvent>, 
     MMEventListener<CorgiEngineEvent>,
     MMEventListener<MMStateChangeEvent<CharacterStates.MovementStates>>,
@@ -38,8 +38,8 @@ public class iFrameGameManager : MMPersistentSingleton<MMSoundManager>,
 
     private void Update()
     {
-        Debug.Log(InputManager.Instance.PrimaryMovement);
-        float x = InputManager.Instance.PrimaryMovement.x;
+        // Debug.Log(InputManager.Instance.PrimaryMovement);
+        // float x = InputManager.Instance.PrimaryMovement.x;
         // uniWindowController.windowPosition += new Vector2(x, 0);
     }
 

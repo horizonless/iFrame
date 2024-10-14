@@ -5490,7 +5490,7 @@ MonoBehaviour:
   ForceFlipTowardsDirection: 1
   ShouldReduceNumberOfJumpsLeft: 0
   LimitNumberOfWalljumps: 1
-  MaximumNumberOfWalljumps: 3
+  MaximumNumberOfWalljumps: 2
   NumberOfWalljumpsLeft: 0
   AllowCoyoteTime: 0
   CoyoteTimeDuration: 0.2
