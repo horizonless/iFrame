@@ -32,35 +32,48 @@ Walk”的平台跳跃游戏。游戏主角是一个老大叔？探寻活着->�
 复用一模一样的地图做关卡设计 收集完毕到教堂的同时 游戏轮回再次开始 一切如初。
 
 #### Forest
-主要负责教学 上下左右移动 和跳跃 
+主要负责教学 上下左右移动 和跳跃d 
 下午
 
 #### Old Forest
-地刺 怪物？ boss追逐？
-wuniwindow horizontal?
-camera追逐？最后结束过度到Dungeon的 Jingle Tree start to chase! Grim clip play
+新机制 无法回头 camera 的叙事 
+地刺 无法回头 怪物？两关
 then not able to camera back!
 傍晚
 
 #### Dungeon
-地刺 怪物？
-关卡向上
+new scene new post process
+横屏 - 重力翻转 一关
+
+新机制失去火把 cursor as torch  叙事
+竖屏 - 下坠死亡 
+怪物从右边显示出来
+camera追逐？最后结束过度到Dungeon的 Jingle Tree start to chase! Grim clip play
+boss追逐？
+wuniwindow horizontal?
+关卡向上 
 傍晚
-重力翻转
-
-
 
 #### Mount
+回到地表 cursor机制消失 no need for torch
+新机制 现实的揭示 - 透明的窗口跳跃 orthogra size small camera
+失去现实
+获得dash冲刺
+morelike celeas
+悬崖 和 dash 
 晚上
 关卡向上
-风和悬崖 失去火把
 
 #### Ice and Snow
+教堂出现
+教堂内部？ npc叙事？ 
+boss fight???
 凌晨 ice platform
 Uniwindow
 Church clip play
 
 #### GameEnd
+need more think
 credits 洋葱哥 bgm play uniwindow 闪现路上温馨的 有没有可能截图玩家的旅程？
 
 
