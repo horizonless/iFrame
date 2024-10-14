@@ -31,6 +31,37 @@ Walk”的平台跳跃游戏。游戏主角是一个老大叔？探寻活着->�
 再次打开游戏的时候 玩家素材丢失了 是游戏里的人物删除的 轮回开始 这个时候需要 收集自己身体意志的碎片 在第一轮看不清的图上开始看清楚了 
 复用一模一样的地图做关卡设计 收集完毕到教堂的同时 游戏轮回再次开始 一切如初。
 
+#### Forest
+主要负责教学 上下左右移动 和跳跃 
+下午
+
+#### Old Forest
+地刺 怪物？ boss追逐？
+wuniwindow horizontal?
+camera追逐？最后结束过度到Dungeon的 Jingle Tree start to chase! Grim clip play
+傍晚
+
+#### Dungeon
+地刺 怪物？
+关卡向上
+傍晚
+重力翻转
+
+
+
+#### Mount
+晚上
+关卡向上
+风和悬崖 失去火把
+
+#### Ice and Snow
+凌晨 ice platform
+Uniwindow
+Church clip play
+
+#### GameEnd
+credits 洋葱哥 bgm play uniwindow 闪现路上温馨的 有没有可能截图玩家的旅程？
+
 
 
 year walk一开始是山脚下的村子 我抱着怀疑的态度望向山上 云雾遮掩下的教堂很难看清 再阴云笼罩下时隐时现 神秘的又让人畏惧 那就是我今夜要到达的地方 我不由的裹紧了身上的大衣 我回屋开始准备出发 拿上昨天准备的行囊 里面有补充能量的鹿肉干和碎鱼片
