@@ -39,6 +39,7 @@ Walk”的平台跳跃游戏。游戏主角是一个老大叔？探寻活着->�
 地刺 怪物？ boss追逐？
 wuniwindow horizontal?
 camera追逐？最后结束过度到Dungeon的 Jingle Tree start to chase! Grim clip play
+then not able to camera back!
 傍晚
 
 #### Dungeon

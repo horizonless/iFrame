@@ -5485,7 +5485,7 @@ MonoBehaviour:
   BlockingMovementStates: 
   BlockingConditionStates: 
   BlockingWeaponStates: 
-  WallJumpForce: {x: 50, y: 17}
+  WallJumpForce: {x: 25, y: 8}
   ForceMode: 0
   ForceFlipTowardsDirection: 1
   ShouldReduceNumberOfJumpsLeft: 0
@@ -84386,8 +84386,8 @@ MonoBehaviour:
         RepeatUntilStopped: 1
         CameraShakeProperties:
           Duration: 0.1
-          Amplitude: 0.5
-          Frequency: 25
+          Amplitude: 0.02
+          Frequency: 10
           AmplitudeX: 0
           AmplitudeY: 0
           AmplitudeZ: 0

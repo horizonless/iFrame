@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using MoreMountains.Tools;
 using MoreMountains.Feedbacks;
 
@@ -391,7 +392,7 @@ namespace MoreMountains.CorgiEngine
 		/// Teleports the object going through the teleporter, either instantly or by tween
 		/// </summary>
 		/// <param name="collider"></param>
-		protected virtual void TeleportCollider(Collider2D collider)
+		protected virtual async void TeleportCollider(Collider2D collider)
 		{
 			_newPosition = Destination.transform.position + Destination.ExitOffset;
 			if (MaintainXEntryPositionOnExit)
@@ -413,7 +414,11 @@ namespace MoreMountains.CorgiEngine
 					_ignoreList.Remove(collider.transform);
 					break;
 				case TeleportationModes.Tween:
+					// GetComponent<BoxCollider2D>().enabled = false;
+					// Destination.GetComponent<BoxCollider2D>().enabled = false;
 					StartCoroutine(TeleportTweenCo(collider, collider.transform.position, _newPosition));
+					// await Task.Delay(1000);
+					// Destination.GetComponent<BoxCollider2D>().enabled = true;
 					break;
 			}
 		}
