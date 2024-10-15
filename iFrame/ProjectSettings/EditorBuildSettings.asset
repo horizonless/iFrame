@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/iFrame/Scenes/iFrame_DungeonCave.unity
     guid: 8cf3cfae96647b2458ff6a2a952b2048
   - enabled: 1
+    path: Assets/iFrame/Scenes/iFrame_MonsterChasing.unity
+    guid: b417932d3d0987342a1fc1762ec93d0e
+  - enabled: 1
     path: Assets/iFrame/Scenes/iFrame_SnowMountain.unity
     guid: 7a223f8bc09353a43bd068ba62bb696d
   - enabled: 1

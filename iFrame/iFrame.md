@@ -46,9 +46,15 @@ new scene new post process
 横屏 - 重力翻转 一关
 
 新机制失去火把 cursor as torch  叙事
-竖屏 - 下坠死亡
+狭窄的通道
+~~竖屏 - 下坠死亡~~
 
-new scene auto scroll level 
+下落的石头 falling platform
+net to climb
+
+
+new scene auto scroll level
+gravity flip
 怪物从右边显示出来
 camera追逐？最后结束过度到Dungeon的 Jingle Tree start to chase! Grim clip play
 boss追逐？
@@ -102,3 +108,11 @@ year walk一开始是山脚下的村子 我抱着怀疑的态度望向山上 云
 02 Altcredit(before church approching!)
 05 Church (the church!!)
 06 credit end (end A Must player dejav)
+
+窗口的左下角是 坐标点 所有的position 以左下
+client size screen size 
+Windows y = 200
+初始 x=0 y = client.y - (windows y / 2) 
+
+或者 x = 0 y = 0
+windowsx > client.x  then reset x = 0 y = y + windows.y (if(y+windows.y) > client.y then y = 0)

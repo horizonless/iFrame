@@ -16,6 +16,8 @@ public class iFrameGameManager : MonoBehaviour,
 
     public UniWindowController uniWindowController;
     public MMSoundManager mmSoundManager;
+    public Camera cam;
+    private Vector3 _lastPosition;
     
     private void OnEnable()
     {
@@ -24,7 +26,9 @@ public class iFrameGameManager : MonoBehaviour,
         this.MMEventStartListening<MMStateChangeEvent<CharacterStates.MovementStates>>();
         this.MMEventStartListening<MMStateChangeEvent<CharacterStates.CharacterConditions>>();
         this.MMEventStartListening<PickableItemEvent>();
-        // uniWindowController.windowSize = new Vector2(500, 500);
+        uniWindowController.windowSize = new Vector2(500, 300);
+        uniWindowController.windowPosition = Vector2.zero;
+        _lastPosition = cam.transform.position;
     }
 
     private void OnDisable()
@@ -38,9 +42,20 @@ public class iFrameGameManager : MonoBehaviour,
 
     private void Update()
     {
-        // Debug.Log(InputManager.Instance.PrimaryMovement);
-        // float x = InputManager.Instance.PrimaryMovement.x;
-        // uniWindowController.windowPosition += new Vector2(x, 0);
+        // return;
+        Debug.Log("ScreenSize w:" + Screen.width + " h:" + Screen.height + "current x:" + uniWindowController.windowPosition.x +  "current y:" + uniWindowController.windowPosition.y + " Client size x:" + uniWindowController.clientSize.x);
+        // return;
+        if (uniWindowController.windowPosition.x > Screen.width)
+        {
+            var initPos = new Vector2(0,uniWindowController.windowPosition.y);
+            uniWindowController.windowPosition = initPos;
+        }
+        
+        var delta = cam.transform.position - _lastPosition;
+        _lastPosition = cam.transform.position;
+        Debug.Log("delta:" + delta);
+        uniWindowController.windowPosition += new Vector2(delta.x * 100, 0);
+        // Debug.Log("ScreenSize w:" + Screen.width + " h:" + Screen.height + "current x:" + uniWindowController.windowPosition.x + " Client size x:" + uniWindowController.clientSize.x);
     }
 
     public void OnMMEvent(MMCharacterEvent characterEvent)
