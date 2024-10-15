@@ -1,0 +1,153 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6978793256297307581
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 119040, guid: f5c57d95bfa8533439fc6b198c40be6d, type: 3}
+      propertyPath: m_Name
+      value: RectangleWithInventory_DialogueSystem
+      objectReference: {fileID: 0}
+    - target: {fileID: 425048, guid: f5c57d95bfa8533439fc6b198c40be6d, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 425048, guid: f5c57d95bfa8533439fc6b198c40be6d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 425048, guid: f5c57d95bfa8533439fc6b198c40be6d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 425048, guid: f5c57d95bfa8533439fc6b198c40be6d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 425048, guid: f5c57d95bfa8533439fc6b198c40be6d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 425048, guid: f5c57d95bfa8533439fc6b198c40be6d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 425048, guid: f5c57d95bfa8533439fc6b198c40be6d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 425048, guid: f5c57d95bfa8533439fc6b198c40be6d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 425048, guid: f5c57d95bfa8533439fc6b198c40be6d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 425048, guid: f5c57d95bfa8533439fc6b198c40be6d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 425048, guid: f5c57d95bfa8533439fc6b198c40be6d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f5c57d95bfa8533439fc6b198c40be6d, type: 3}
+--- !u!1 &6978793256297417917 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 119040, guid: f5c57d95bfa8533439fc6b198c40be6d,
+    type: 3}
+  m_PrefabInstance: {fileID: 6978793256297307581}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6978793256296931813 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 425048, guid: f5c57d95bfa8533439fc6b198c40be6d,
+    type: 3}
+  m_PrefabInstance: {fileID: 6978793256297307581}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &114269541443135442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6978793256297417917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c593457cd8105e148906690e1707c592, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: 16384
+  condition:
+    luaConditions: []
+    questConditions: []
+    acceptedTags: []
+    acceptedGameObjects: []
+    luaWizardIndex: -1
+    lastEvaluationValue: 0
+  setQuestState: 1
+  questName: 
+  questState: 0
+  setQuestEntryState: 0
+  questEntryNumber: 1
+  questEntryState: 0
+  setAnotherQuestEntryState: 0
+  anotherQuestEntryNumber: 1
+  anotherQuestEntryState: 0
+  luaCode: 
+  sequence: 'AnimatorFloat(xSpeed,0)@0.1;
+
+    AnimatorFloat(ySpeed,0)@0.1;
+
+    AnimatorBool(Walking,false)@0.1;
+
+    AnimatorBool(Running,false)@0.1;
+
+    AnimatorPlay(idle)@0.1'
+  sequenceSpeaker: {fileID: 6978793256296931813}
+  sequenceListener: {fileID: 0}
+  waitOneFrameOnStartOrEnable: 1
+  alertMessage: 
+  textTable: {fileID: 0}
+  alertDuration: 0
+  sendMessages: []
+  barkSource: 0
+  barkConversation: 
+  barkText: 
+  barkTextSequence: 
+  barker: {fileID: 0}
+  barkTarget: {fileID: 0}
+  barkOrder: 0
+  allowBarksDuringConversations: 0
+  skipBarkIfNoValidEntries: 0
+  cacheBarkLines: 0
+  conversation: 
+  conversationConversant: {fileID: 0}
+  conversationActor: {fileID: 0}
+  startConversationEntryID: -1
+  startConversationEntryTitle: 
+  exclusive: 0
+  replace: 0
+  queue: 0
+  skipIfNoValidEntries: 1
+  preventRestartOnSameFrameEnded: 0
+  stopConversationOnTriggerExit: 0
+  stopConversationIfTooFar: 0
+  maxConversationDistance: 5
+  monitorConversationDistanceFrequency: 1
+  showCursorDuringConversation: 0
+  pauseGameDuringConversation: 0
+  setActiveActions: []
+  setEnabledActions: []
+  setAnimatorStateActions: []
+  onExecute:
+    m_PersistentCalls:
+      m_Calls: []
+  useConversationTitlePicker: 1
+  useBarkTitlePicker: 1
+  useQuestNamePicker: 1
+  selectedDatabase: {fileID: 11400000, guid: be16a3bda030c014091b3cdac62b038f, type: 2}

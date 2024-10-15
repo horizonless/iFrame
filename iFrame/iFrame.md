@@ -89,6 +89,14 @@ year walk一开始是山脚下的村子 我抱着怀疑的态度望向山上 云
 “又是你? 人总是为一些没有意义的事情付出 我看你都有点烦了。”
 “去呗，肯定还是去山上是吧 我想你知道怎么走 毕竟我都记不清你来多少次了。”
 
-
-
-   
+### BGM AssignMent
+09 Intro (PlayerHouse) animation only for story
+14 Stina (Tutorial Forest)
+10 beforeaven (old forest)?
+01 AfterCellar (cave main) or MyLing
+08 Grim   (Cave level end Moster Chase!!!)
+11 portal (UniWindow ice snow mountain walk through with lake!)
+07 Doll ice snow ???? 
+02 Altcredit(before church approching!)
+05 Church (the church!!)
+06 credit end (end A Must player dejav)
