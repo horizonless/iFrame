@@ -36,8 +36,8 @@ Walk”的平台跳跃游戏。游戏主角是一个老大叔？探寻活着->�
 下午
 
 #### Old Forest
-新机制 无法回头 camera 的叙事 
-地刺 无法回头 怪物？两关
+新机制 ~~无法回头~~ camera 的叙事 
+地刺 ~~无法回头~~ 水下或者天上陆地 怪物？两关
 then not able to camera back!
 傍晚
 
@@ -46,7 +46,9 @@ new scene new post process
 横屏 - 重力翻转 一关
 
 新机制失去火把 cursor as torch  叙事
-竖屏 - 下坠死亡 
+竖屏 - 下坠死亡
+
+new scene auto scroll level 
 怪物从右边显示出来
 camera追逐？最后结束过度到Dungeon的 Jingle Tree start to chase! Grim clip play
 boss追逐？
