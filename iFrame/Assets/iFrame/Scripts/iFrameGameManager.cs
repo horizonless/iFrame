@@ -26,9 +26,9 @@ public class iFrameGameManager : MonoBehaviour,
         this.MMEventStartListening<MMStateChangeEvent<CharacterStates.MovementStates>>();
         this.MMEventStartListening<MMStateChangeEvent<CharacterStates.CharacterConditions>>();
         this.MMEventStartListening<PickableItemEvent>();
-        uniWindowController.windowSize = new Vector2(500, 300);
-        uniWindowController.windowPosition = Vector2.zero;
-        _lastPosition = cam.transform.position;
+        // uniWindowController.windowSize = new Vector2(500, 300);
+        // uniWindowController.windowPosition = Vector2.zero;
+        // _lastPosition = cam.transform.position;
     }
 
     private void OnDisable()
@@ -42,7 +42,7 @@ public class iFrameGameManager : MonoBehaviour,
 
     private void Update()
     {
-        // return;
+        return;
         Debug.Log("ScreenSize w:" + Screen.width + " h:" + Screen.height + "current x:" + uniWindowController.windowPosition.x +  "current y:" + uniWindowController.windowPosition.y + " Client size x:" + uniWindowController.clientSize.x);
         // return;
         if (uniWindowController.windowPosition.x > Screen.width)
