@@ -117,3 +117,20 @@ Windows y = 200
 
 或者 x = 0 y = 0
 windowsx > client.x  then reset x = 0 y = y + windows.y (if(y+windows.y) > client.y then y = 0)
+
+NPC 用不同字体 相同字体预示同一个角色
+level design
+场景搭建
+相机后处理
+loading scene modify
+begin animation
+monster chasing animation
+credit
+Music invoke
+lower sfx
+church img alpha issue
+maybe startscreen？
+maybe save and load and new game option?
+maybe new character animation? instead of corgi no time though
+拖动重合的解密
+和边框拖动的解密
