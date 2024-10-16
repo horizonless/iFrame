@@ -16,27 +16,18 @@ MMEventListener<MMCharacterEvent>
     private int _windowsX;
     private int _windowsY;
     private Vector3 _lastPosition;
+
+    private bool _finishTalk = false;
     // Start is called before the first frame update
     void Start()
     {
-        _lastPosition = cam.transform.position;
-
-        _windowsX = Screen.currentResolution.width / 4;
-        _windowsY = Screen.currentResolution.height / 3;
-        uniWindowController.isTopmost = true;
-        // uniWindowController.forceWindowed = true;
-        uniWindowController.isTransparent = true;
-        Debug.Log("windows x:" + _windowsX + " y:" + _windowsY);
-        uniWindowController.windowSize = new Vector2(_windowsX, _windowsY);
-        uniWindowController.windowPosition = Vector2.zero;
-        uniWindowController.alphaValue = 0.5f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-        Debug.Log("ScreenSize w:" + Screen.currentResolution.width + " h:" + Screen.currentResolution.height + "current x:" + uniWindowController.windowPosition.x +  "current y:" + uniWindowController.windowPosition.y + " Client size x:" + uniWindowController.clientSize.x);
+        if (!_finishTalk) return;
+        // Debug.Log("ScreenSize w:" + Screen.currentResolution.width + " h:" + Screen.currentResolution.height + "current x:" + uniWindowController.windowPosition.x +  "current y:" + uniWindowController.windowPosition.y + " Client size x:" + uniWindowController.clientSize.x);
         if (uniWindowController.windowPosition.x < 0)
         {
             var initPos = new Vector2(0,uniWindowController.windowPosition.y);
@@ -63,7 +54,7 @@ MMEventListener<MMCharacterEvent>
         
         var delta = cam.transform.position - _lastPosition;
         _lastPosition = cam.transform.position;
-        Debug.Log("delta:" + delta);
+        // Debug.Log("delta:" + delta);
         uniWindowController.windowPosition += new Vector2(delta.x * 100, delta.y * 50);
         // Debug.Log("ScreenSize w:" + Screen.width + " h:" + Screen.height + "current x:" + uniWindowController.windowPosition.x + " Client size x:" + uniWindowController.clientSize.x);
     }
@@ -72,4 +63,19 @@ MMEventListener<MMCharacterEvent>
     {
         
     }
+
+    public void OnDragonFinishCov()
+    {
+        _lastPosition = cam.transform.position;
+        _windowsX = Screen.currentResolution.width / 4;
+        _windowsY = Screen.currentResolution.height / 3;
+        uniWindowController.isTopmost = true;
+        // uniWindowController.forceWindowed = true;
+        uniWindowController.isTransparent = true;
+        Debug.Log("windows x:" + _windowsX + " y:" + _windowsY);
+        uniWindowController.windowSize = new Vector2(_windowsX, _windowsY);
+        uniWindowController.windowPosition = Vector2.zero;
+        uniWindowController.alphaValue = 0.5f;
+    }
+
 }
