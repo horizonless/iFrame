@@ -49,17 +49,17 @@ new scene new post process
 狭窄的通道
 ~~竖屏 - 下坠死亡~~
 
-下落的石头 falling platform
+下落的石头 falling platform todo 
 net to climb
 
 
 new scene auto scroll level
 gravity flip
-怪物从右边显示出来
+怪物从左边显示出来
 camera追逐？最后结束过度到Dungeon的 Jingle Tree start to chase! Grim clip play
 boss追逐？
 wuniwindow horizontal?
-关卡向上 
+~~关卡向上~~ 
 傍晚
 
 #### Mount
@@ -82,6 +82,7 @@ Church clip play
 
 #### GameEnd
 need more think
+the loop! visit each character met before the i need a good story for each one
 credits 洋葱哥 bgm play uniwindow 闪现路上温馨的 有没有可能截图玩家的旅程？
 
 

@@ -18,6 +18,12 @@ EditorBuildSettings:
     path: Assets/iFrame/Scenes/iFrame_MonsterChasing.unity
     guid: b417932d3d0987342a1fc1762ec93d0e
   - enabled: 1
+    path: Assets/iFrame/Scenes/iFrame_TheChurch.unity
+    guid: cca2feba9132c4347bc247da903ccffc
+  - enabled: 1
+    path: Assets/iFrame/Scenes/iFrame_ChurchInside.unity
+    guid: 5cdaf6fb42a6e4b4c92e69fbdba8c36a
+  - enabled: 1
     path: Assets/Plugins/CorgiEngine/ThirdParty/MoreMountains/MMTools/Tools/MMSceneLoading/LoadingScreens/LoadingScreen.unity
     guid: 888394d52616e5e42b3b54c3f2bbd3eb
   m_configObjects: {}
