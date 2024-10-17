@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Kirurobo;
@@ -19,8 +20,19 @@ MMEventListener<MMCharacterEvent>
 
     private bool _finishTalk = false;
     // Start is called before the first frame update
+    private void OnEnable()
+    {
+        this.MMEventStartListening<MMCharacterEvent>();
+    }
+
+    private void OnDisable()
+    {
+        this.MMEventStopListening<MMCharacterEvent>();
+    }
+
     void Start()
     {
+        uniWindowController.shouldFitMonitor = true;
     }
 
     // Update is called once per frame
@@ -61,11 +73,21 @@ MMEventListener<MMCharacterEvent>
 
     public void OnMMEvent(MMCharacterEvent characterEvent)
     {
-        
+        if(characterEvent.TargetCharacter.CharacterType == Character.CharacterTypes.Player)
+        {
+            switch (characterEvent.EventType)
+            {
+                case MMCharacterEventTypes.Ladder:
+                    // if (IFrameMonsterChasingManager == null) return;
+                    // IFrameMonsterChasingManager.OnPlayerDied();
+                    break;
+            }	
+        }
     }
 
     public void OnDragonFinishCov()
     {
+        _finishTalk = true;
         _lastPosition = cam.transform.position;
         _windowsX = Screen.currentResolution.width / 4;
         _windowsY = Screen.currentResolution.height / 3;
@@ -75,7 +97,8 @@ MMEventListener<MMCharacterEvent>
         Debug.Log("windows x:" + _windowsX + " y:" + _windowsY);
         uniWindowController.windowSize = new Vector2(_windowsX, _windowsY);
         uniWindowController.windowPosition = Vector2.zero;
-        uniWindowController.alphaValue = 0.5f;
+        LevelManager.Instance.Players[0].GetComponent<CharacterDash>().enabled = true;
+        uniWindowController.alphaValue = 0.7f;
     }
 
 }

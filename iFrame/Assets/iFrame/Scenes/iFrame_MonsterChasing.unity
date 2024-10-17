@@ -3270,7 +3270,7 @@ MonoBehaviour:
   SceneCharacters:
   - {fileID: 807928050}
   DebugSpawn: {fileID: 0}
-  CheckpointAttributionAxis: 0
+  CheckpointAttributionAxis: 3
   CheckpointAttributionDirection: 0
   CurrentCheckPoint: {fileID: 0}
   PointsOfEntry: []
@@ -3698,13 +3698,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: CheckPoint
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1c8748acbfe1eb64d88a630bf10a9aa2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1c8748acbfe1eb64d88a630bf10a9aa2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -55.84
+      value: -44.3
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1c8748acbfe1eb64d88a630bf10a9aa2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.1
+      value: -15.32
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1c8748acbfe1eb64d88a630bf10a9aa2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3737,6 +3741,38 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 1c8748acbfe1eb64d88a630bf10a9aa2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 1c8748acbfe1eb64d88a630bf10a9aa2, type: 3}
+      propertyPath: CheckPointOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 1c8748acbfe1eb64d88a630bf10a9aa2, type: 3}
+      propertyPath: OnCheckpointReached.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 1c8748acbfe1eb64d88a630bf10a9aa2, type: 3}
+      propertyPath: OnCheckpointReached.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 1c8748acbfe1eb64d88a630bf10a9aa2, type: 3}
+      propertyPath: OnCheckpointReached.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 213527047}
+    - target: {fileID: 11400000, guid: 1c8748acbfe1eb64d88a630bf10a9aa2, type: 3}
+      propertyPath: OnCheckpointReached.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 1c8748acbfe1eb64d88a630bf10a9aa2, type: 3}
+      propertyPath: OnCheckpointReached.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnCheckPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 1c8748acbfe1eb64d88a630bf10a9aa2, type: 3}
+      propertyPath: OnCheckpointReached.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MoreMountains.CorgiEngine.OneWayLevelManager, MoreMountains.CorgiEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 1c8748acbfe1eb64d88a630bf10a9aa2, type: 3}
+      propertyPath: OnCheckpointReached.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9319,7 +9355,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 11
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -11006,11 +11042,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7a343ffc127af4b41b1e509d55d21956, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -99.46
+      value: -94.41
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7a343ffc127af4b41b1e509d55d21956, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -48
+      value: -47.83
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7a343ffc127af4b41b1e509d55d21956, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11031,6 +11067,34 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 7a343ffc127af4b41b1e509d55d21956, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 7a343ffc127af4b41b1e509d55d21956, type: 3}
+      propertyPath: OnCheckpointReached.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 7a343ffc127af4b41b1e509d55d21956, type: 3}
+      propertyPath: OnCheckpointReached.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 7a343ffc127af4b41b1e509d55d21956, type: 3}
+      propertyPath: OnCheckpointReached.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 213527047}
+    - target: {fileID: 11400000, guid: 7a343ffc127af4b41b1e509d55d21956, type: 3}
+      propertyPath: OnCheckpointReached.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 7a343ffc127af4b41b1e509d55d21956, type: 3}
+      propertyPath: OnCheckpointReached.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnCheckPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 7a343ffc127af4b41b1e509d55d21956, type: 3}
+      propertyPath: OnCheckpointReached.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MoreMountains.CorgiEngine.OneWayLevelManager, MoreMountains.CorgiEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 7a343ffc127af4b41b1e509d55d21956, type: 3}
+      propertyPath: OnCheckpointReached.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
