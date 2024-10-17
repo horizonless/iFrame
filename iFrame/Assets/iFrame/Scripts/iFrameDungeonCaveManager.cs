@@ -13,6 +13,8 @@ public class iFrameDungeonCaveManager : MonoBehaviour
     public CorgiController CorgiController;
 
     public GameObject block;
+
+    public GameObject eggBG;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,6 +42,7 @@ public class iFrameDungeonCaveManager : MonoBehaviour
     {
         LevelManager.Instance.Players[0].GetComponent<CharacterGroundNormalGravity>().enabled = true;
         LevelManager.Instance.Players[0].GetComponent<CorgiController>().StickToSlopes = false;
+        eggBG.SetActive(true);
         // NormalGravity.enabled = true;
         // CorgiController.StickToSlopes = false;
     }
