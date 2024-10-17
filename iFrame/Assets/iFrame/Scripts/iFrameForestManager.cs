@@ -8,6 +8,8 @@ public class iFrameForestManager : MonoBehaviour
     public MMSoundManager ForestSoundManager;
     public AudioSource BGMAudioSource;
     public AudioClip oldForestClip;
+    public GameObject block;
+    public GameObject NPC;
     void Start()
     {
         
@@ -17,6 +19,12 @@ public class iFrameForestManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void OnFinishCov()
+    {
+	    block.gameObject.SetActive(false);
+	    // NPC.gameObject.SetActive(false);
     }
 
     public void OnEnterOldForest()

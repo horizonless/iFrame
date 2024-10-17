@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using MoreMountains.CorgiEngine;
+using MoreMountains.Tools;
 using UnityEngine;
 
 public class iFrameDungeonCaveManager : MonoBehaviour
@@ -10,10 +11,12 @@ public class iFrameDungeonCaveManager : MonoBehaviour
 
     public CharacterGroundNormalGravity NormalGravity;
     public CorgiController CorgiController;
+
+    public GameObject block;
     // Start is called before the first frame update
     void Start()
     {
-        
+        MMSoundManager.Instance.SetVolumeSfx(0.2f);
     }
 
     // Update is called once per frame
@@ -30,6 +33,7 @@ public class iFrameDungeonCaveManager : MonoBehaviour
     public void OnFinishDemoConversation()
     {
         cursorPuzzleGO.SetActive(!_hasFire);
+        block.gameObject.SetActive(false);
     }
     
     public void OnEnterExitRoom()

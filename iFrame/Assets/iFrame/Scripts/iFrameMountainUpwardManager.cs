@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Kirurobo;
 using MoreMountains.CorgiEngine;
 using MoreMountains.Tools;
@@ -8,12 +9,14 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 public class iFrameMountainUpwardManager : MonoBehaviour,
-MMEventListener<MMCharacterEvent>
+MMEventListener<MMCharacterEvent>,
+MMEventListener<CorgiEngineEvent>
 {
     
     public UniWindowController uniWindowController;
     public MMSoundManager mmSoundManager;
     public Camera cam;
+    public GameObject NPC;
     private int _windowsX;
     private int _windowsY;
     private Vector3 _lastPosition;
@@ -32,7 +35,9 @@ MMEventListener<MMCharacterEvent>
 
     void Start()
     {
+        // Screen.fullScreen = true;
         uniWindowController.shouldFitMonitor = true;
+        // uniWindowController.isZoomed = true;
     }
 
     // Update is called once per frame
@@ -75,9 +80,12 @@ MMEventListener<MMCharacterEvent>
     {
         if(characterEvent.TargetCharacter.CharacterType == Character.CharacterTypes.Player)
         {
+            Debug.Log("tyep" + characterEvent.EventType);
             switch (characterEvent.EventType)
             {
                 case MMCharacterEventTypes.Ladder:
+                    if (uniWindowController.alphaValue < 0.5f) return;
+                    uniWindowController.alphaValue -= 0.1f;
                     // if (IFrameMonsterChasingManager == null) return;
                     // IFrameMonsterChasingManager.OnPlayerDied();
                     break;
@@ -85,20 +93,35 @@ MMEventListener<MMCharacterEvent>
         }
     }
 
-    public void OnDragonFinishCov()
+    public async void OnDragonFinishCov()
     {
         _finishTalk = true;
         _lastPosition = cam.transform.position;
+        uniWindowController.isTransparent = true;
+        uniWindowController.isTopmost = true;
         _windowsX = Screen.currentResolution.width / 4;
         _windowsY = Screen.currentResolution.height / 3;
-        uniWindowController.isTopmost = true;
         // uniWindowController.forceWindowed = true;
-        uniWindowController.isTransparent = true;
         Debug.Log("windows x:" + _windowsX + " y:" + _windowsY);
         uniWindowController.windowSize = new Vector2(_windowsX, _windowsY);
         uniWindowController.windowPosition = Vector2.zero;
         LevelManager.Instance.Players[0].GetComponent<CharacterDash>().enabled = true;
-        uniWindowController.alphaValue = 0.7f;
+        uniWindowController.alphaValue = 0.9f;
+        // await Task.Delay(1000);
+        // NPC.gameObject.SetActive(false);
     }
 
+    public void OnMMEvent(CorgiEngineEvent eventType)
+    {
+        Debug.Log("engine" + eventType);
+        switch (eventType.EventType)
+        {
+            case CorgiEngineEventTypes.Respawn:
+                if (uniWindowController.alphaValue <  0.5f) return;
+                uniWindowController.alphaValue -= 0.1f;
+                break;
+            case CorgiEngineEventTypes.LevelStart:
+                break;
+        }
+    }
 }

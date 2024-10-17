@@ -61,19 +61,19 @@ namespace MoreMountains.CorgiEngine
 		/// </summary>
 		protected async void Start()
 		{
-			await Task.Delay(1);
-			
-			if (MusicSwitch != null)
-			{
-				MusicSwitch.CurrentSwitchState = MMSoundManager.Instance.settingsSo.Settings.MusicOn ? MMSwitch.SwitchStates.Right : MMSwitch.SwitchStates.Left;
-				MusicSwitch.InitializeState ();
-			}
-
-			if (SfxSwitch != null)
-			{
-				SfxSwitch.CurrentSwitchState = MMSoundManager.Instance.settingsSo.Settings.SfxOn ? MMSwitch.SwitchStates.Right : MMSwitch.SwitchStates.Left;
-				SfxSwitch.InitializeState ();
-			}
+			// await Task.Delay(1);
+			//
+			// if (MusicSwitch != null)
+			// {
+			// 	MusicSwitch.CurrentSwitchState = MMSoundManager.Instance.settingsSo.Settings.MusicOn ? MMSwitch.SwitchStates.Right : MMSwitch.SwitchStates.Left;
+			// 	MusicSwitch.InitializeState ();
+			// }
+			//
+			// if (SfxSwitch != null)
+			// {
+			// 	SfxSwitch.CurrentSwitchState = MMSoundManager.Instance.settingsSo.Settings.SfxOn ? MMSwitch.SwitchStates.Right : MMSwitch.SwitchStates.Left;
+			// 	SfxSwitch.InitializeState ();
+			// }
 		}
 
 		/// <summary>
