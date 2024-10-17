@@ -54,6 +54,7 @@ public class iFrameMonsterChasingManager : MonoBehaviour,
         uniWindowController.windowSize = new Vector2(_windowsX + 100, _windowsY + 50);
         _initPos = new Vector2(0, Screen.currentResolution.height / 2 - (_windowsY / 2) );
         uniWindowController.windowPosition = _initPos;
+        MMSoundManager.Instance.SetVolumeSfx(0.2f);
         // uniWindowController.alphaValue = 0.5f;
     }
 

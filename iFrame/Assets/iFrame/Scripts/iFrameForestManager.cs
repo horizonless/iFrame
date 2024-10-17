@@ -13,6 +13,7 @@ public class iFrameForestManager : MonoBehaviour
     void Start()
     {
         
+        MMSoundManager.Instance.SetVolumeSfx(0.2f);
     }
 
     // Update is called once per frame

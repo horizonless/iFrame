@@ -17,11 +17,14 @@ MMEventListener<CorgiEngineEvent>
     public MMSoundManager mmSoundManager;
     public Camera cam;
     public GameObject NPC;
+    public GameObject signPost;
     private int _windowsX;
     private int _windowsY;
     private Vector3 _lastPosition;
 
     private bool _finishTalk = false;
+
+    private bool _hasDash = false;
     // Start is called before the first frame update
     private void OnEnable()
     {
@@ -37,6 +40,7 @@ MMEventListener<CorgiEngineEvent>
     {
         // Screen.fullScreen = true;
         uniWindowController.shouldFitMonitor = true;
+        MMSoundManager.Instance.SetVolumeSfx(0.2f);
         // uniWindowController.isZoomed = true;
     }
 
@@ -95,6 +99,7 @@ MMEventListener<CorgiEngineEvent>
 
     public async void OnDragonFinishCov()
     {
+        signPost.gameObject.SetActive(_hasDash);
         _finishTalk = true;
         _lastPosition = cam.transform.position;
         uniWindowController.isTransparent = true;
@@ -105,10 +110,16 @@ MMEventListener<CorgiEngineEvent>
         Debug.Log("windows x:" + _windowsX + " y:" + _windowsY);
         uniWindowController.windowSize = new Vector2(_windowsX, _windowsY);
         uniWindowController.windowPosition = Vector2.zero;
-        LevelManager.Instance.Players[0].GetComponent<CharacterDash>().enabled = true;
+        LevelManager.Instance.Players[0].GetComponent<CharacterDash>().enabled = _hasDash;
         uniWindowController.alphaValue = 0.9f;
         // await Task.Delay(1000);
         // NPC.gameObject.SetActive(false);
+    }
+
+    public void GetDash()
+    {
+        Debug.Log("get dash");
+        _hasDash = true;
     }
 
     public void OnMMEvent(CorgiEngineEvent eventType)
