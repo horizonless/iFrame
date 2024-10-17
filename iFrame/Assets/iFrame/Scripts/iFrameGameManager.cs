@@ -18,6 +18,7 @@ public class iFrameGameManager : MonoBehaviour,
     public MMSoundManager mmSoundManager;
     public Camera cam;
     private Vector3 _lastPosition;
+    public iFrameMonsterChasingManager IFrameMonsterChasingManager;
     
     private void OnEnable()
     {
@@ -60,21 +61,40 @@ public class iFrameGameManager : MonoBehaviour,
 
     public void OnMMEvent(MMCharacterEvent characterEvent)
     {
-        Debug.Log(characterEvent);
+        // Debug.Log(characterEvent);
         if(characterEvent.TargetCharacter.CharacterType == Character.CharacterTypes.Player)
         {
             switch (characterEvent.EventType)
             {
-                case MMCharacterEventTypes.Jump:
-                    // MMAchievementManager.AddProgress ("JumpAround", 1);
+                case MMCharacterEventTypes.Ladder:
+                    if (IFrameMonsterChasingManager == null) return;
+                    IFrameMonsterChasingManager.OnPlayerDied();
                     break;
             }	
         }
+        // if(characterEvent.TargetCharacter.CharacterType == Character.CharacterTypes.Player)
+        // {
+        //     switch (characterEvent.EventType)
+        //     {
+        //         case MMCharacterEventTypes.Jump:
+        //             // MMAchievementManager.AddProgress ("JumpAround", 1);
+        //             break;
+        //     }	
+        // }
     }
 
     public void OnMMEvent(CorgiEngineEvent eventType)
     {
+        // Debug.Log("EngineEvent" + eventType);
         // throw new System.NotImplementedException();
+			switch (eventType.EventType)
+			{
+				case CorgiEngineEventTypes.Respawn:
+                    IFrameMonsterChasingManager.OnPlayerRespawn();
+					break;
+				case CorgiEngineEventTypes.LevelStart:
+					break;
+			}
     }
 
     public void OnMMEvent(MMStateChangeEvent<CharacterStates.MovementStates> eventType)

@@ -196,7 +196,7 @@ namespace MoreMountains.FeedbacksForThirdParty
 			MMCameraShakeStopEvent.Unregister(OnCameraShakeStopEvent);
 		}
 
-		protected virtual void TestShake()
+		public virtual void TestShake()
 		{
 			MMCameraShakeEvent.Trigger(TestDuration, TestAmplitude, TestFrequency, 0f, 0f, 0f, false, new MMChannelData(ChannelMode, Channel, MMChannelDefinition));
 		}
