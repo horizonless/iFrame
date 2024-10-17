@@ -132,5 +132,5 @@ church img alpha issue
 maybe startscreen？
 maybe save and load and new game option?
 maybe new character animation? instead of corgi no time though
-拖动重合的解密
+!!! must !! 最后一天了不做完不睡觉。。拖动重合的解密！！！最好的解密。
 和边框拖动的解密
