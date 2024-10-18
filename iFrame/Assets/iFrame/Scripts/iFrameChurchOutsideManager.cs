@@ -13,6 +13,8 @@ public class iFrameChurchOutsideManager : MonoBehaviour
     private bool _isEight;
     private bool _isTwo;
     private bool _isThree;
+    public GameObject block;
+    public GameObject npc;
     void Start()
     {
         // uniWindowController.forceWindowed = true;
@@ -60,6 +62,8 @@ public class iFrameChurchOutsideManager : MonoBehaviour
         {
             Debug.Log("pass");
             //pass
+            block.gameObject.SetActive(false);
+            npc.gameObject.SetActive(false);
             return;
         }
 

@@ -10,10 +10,12 @@ public class iFrameForestManager : MonoBehaviour
     public AudioClip oldForestClip;
     public GameObject block;
     public GameObject NPC;
+    public GameObject startAnim;
     void Start()
     {
-        
+	    Debug.Log("play anim");
         MMSoundManager.Instance.SetVolumeSfx(0.2f);
+        startAnim.gameObject.SetActive(true);
     }
 
     // Update is called once per frame

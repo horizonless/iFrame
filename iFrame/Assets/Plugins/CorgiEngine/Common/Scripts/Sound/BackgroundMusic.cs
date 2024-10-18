@@ -45,5 +45,9 @@ namespace MoreMountains.CorgiEngine
             
 			MMSoundManagerSoundPlayEvent.Trigger(SoundClip, options);
 		}
+
+		public void Stop()
+		{
+		}
 	}
 }

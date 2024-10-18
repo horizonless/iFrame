@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/iFrame/Scenes/iFrame_Title.unity
+    guid: 61a1f6af216147f469706e4ee152cecc
+  - enabled: 1
     path: Assets/iFrame/Scenes/iFrame_TheChurch.unity
     guid: cca2feba9132c4347bc247da903ccffc
   - enabled: 1

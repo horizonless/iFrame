@@ -269,7 +269,7 @@ PrefabInstance:
         type: 3}
       propertyPath: OnExit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1150322520}
+      objectReference: {fileID: 1874001280}
     - target: {fileID: 5758574105483329267, guid: 82bb24c4576a8c847ac38bfa6550f716,
         type: 3}
       propertyPath: OnExit.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -9342,6 +9342,7 @@ Transform:
   - {fileID: 1487085693}
   - {fileID: 213527045}
   - {fileID: 1346545523}
+  - {fileID: 1874001279}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &426415669
@@ -16381,11 +16382,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7a343ffc127af4b41b1e509d55d21956, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -236.58
+      value: -99.8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7a343ffc127af4b41b1e509d55d21956, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 28.72
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7a343ffc127af4b41b1e509d55d21956, type: 3}
       propertyPath: m_LocalPosition.z
@@ -18037,7 +18038,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1150322511}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f63d4093abc03954caf9d3ddc67f2fdb, type: 3}
   m_Name: 
@@ -52679,6 +52680,55 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1724632672}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1874001278
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1874001279}
+  - component: {fileID: 1874001280}
+  m_Layer: 0
+  m_Name: caveManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1874001279
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874001278}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 393494204}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1874001280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874001278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f63d4093abc03954caf9d3ddc67f2fdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorPuzzleGO: {fileID: 957798791}
+  NormalGravity: {fileID: 0}
+  CorgiController: {fileID: 0}
+  block: {fileID: 384454844}
+  eggBG: {fileID: 1687740855}
 --- !u!1001 &1894826646
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52782,7 +52832,7 @@ MonoBehaviour:
     onExecute:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1150322520}
+        - m_Target: {fileID: 1874001280}
           m_TargetAssemblyTypeName: iFrameDungeonCaveManager, Assembly-CSharp
           m_MethodName: OnSacrificeFire
           m_Mode: 1
@@ -52798,7 +52848,7 @@ MonoBehaviour:
     onExecute:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1150322520}
+        - m_Target: {fileID: 1874001280}
           m_TargetAssemblyTypeName: iFrameDungeonCaveManager, Assembly-CSharp
           m_MethodName: OnFinishDemoConversation
           m_Mode: 1
@@ -52924,7 +52974,7 @@ PrefabInstance:
     - target: {fileID: 8327787505986376350, guid: d18ddc3996b28ba44a154ea5387df4dd,
         type: 3}
       propertyPath: m_Size.y
-      value: 5.2405148
+      value: 5.109502
       objectReference: {fileID: 0}
     - target: {fileID: 8327787505986376350, guid: d18ddc3996b28ba44a154ea5387df4dd,
         type: 3}
@@ -52934,7 +52984,7 @@ PrefabInstance:
     - target: {fileID: 8327787505986376350, guid: d18ddc3996b28ba44a154ea5387df4dd,
         type: 3}
       propertyPath: m_Offset.y
-      value: 0.16762877
+      value: 0.102122426
       objectReference: {fileID: 0}
     - target: {fileID: 8327787505986376350, guid: d18ddc3996b28ba44a154ea5387df4dd,
         type: 3}
@@ -55310,7 +55360,7 @@ MonoBehaviour:
         ID: 0
         AudioGroup: {fileID: 0}
         RecycleAudioSource: {fileID: 0}
-        Loop: 0
+        Loop: 1
         Persistent: 0
         DoNotPlayIfClipAlreadyPlaying: 0
         StopSoundOnFeedbackStop: 0
