@@ -15,22 +15,25 @@ public class iFrameChurchOutsideManager : MonoBehaviour
     private bool _isThree;
     void Start()
     {
-        uniWindowController.forceWindowed = true;
-        uniWindowController.shouldFitMonitor = true;
+        // uniWindowController.forceWindowed = true;
+        // uniWindowController.shouldFitMonitor = true;
+        uniWindowController.windowSize = new Vector2(Screen.currentResolution.width, Screen.currentResolution.height);
+        uniWindowController.windowPosition = Vector2.zero;
     }
 
-    public async void PuzzleOneStart()
+    public void PuzzleOneStart()
     {
+        // uniWindowController.shouldFitMonitor = false;
         Debug.Log("PuzzleOneStart");
-        uniWindowController.forceWindowed = true;
+        // uniWindowController.forceWindowed = true;
         _windowsX = Screen.currentResolution.width / 4;
         _windowsY = Screen.currentResolution.height / 3;
         // uniWindowController.forceWindowed = true;
         // Debug.Log("windows x:" + _windowsX + " y:" + _windowsY);
         uniWindowController.windowSize = new Vector2(_windowsX, _windowsY);
-        // uniWindowController.windowPosition = Vector2.zero;
-        await Task.Delay(5000);
-        uniWindowController.shouldFitMonitor = true;
+        uniWindowController.windowPosition = Vector2.zero;
+        // await Task.Delay(5000);
+        // uniWindowController.shouldFitMonitor = true;
     }
 
     public void PuzzleOneEight()
