@@ -46,27 +46,24 @@ public class iFrameMonsterChasingManager : MonoBehaviour,
     {
         Debug.Log("client x:" + uniWindowController.clientSize.x + " y:" + uniWindowController.clientSize.y);
         Debug.Log("current resolution w:" + Screen.currentResolution.width + " h:" + Screen.currentResolution.height);
-        // Debug.Log("resolution w:" + Screen..width + " h:" + Screen.currentResolution.height);
         GameManager.Instance.MaximumLives = 0;
         GameManager.Instance.CurrentLives = 0;
         _LastPlayerTras = LevelManager.Instance.Players[0].transform.position;
         _lastPosition = cam.transform.position;
         _windowsX = Screen.currentResolution.width / 3f;
         _windowsY = Screen.currentResolution.height / 3f;
-        // uniWindowController.isTopmost = true;
-        // uniWindowController.isTransparent = false;
         Debug.Log("windows x:" + _windowsX + " y:" + _windowsY);
         uniWindowController.windowSize = new Vector2(_windowsX , _windowsY );
-        _initPos = new Vector2(0, Screen.currentResolution.height / 2f);
+        _initPos = new Vector2(0, Screen.currentResolution.height / 3f);
         Debug.Log("initPost" + _initPos);
         uniWindowController.windowPosition = _initPos;
         MMSoundManager.Instance.SetVolumeSfx(0.5f);
-        // uniWindowController.alphaValue = 0.5f;
     }
 
     // Update is called once per frame
     void Update()
     {
+        uniWindowController.windowSize = new Vector2(_windowsX, _windowsY);
         // return;
         // if (notEazy)
         // {
