@@ -18,7 +18,9 @@ public class iFrameDungeonCaveManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        MMSoundManager.Instance.SetVolumeSfx(0.2f);
+        MMSoundManager.Instance.SetVolumeSfx(0.5f);
+        GameManager.Instance.MaximumLives = 0;
+        GameManager.Instance.CurrentLives = 0;
     }
 
     // Update is called once per frame

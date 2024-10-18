@@ -44,6 +44,8 @@ public class iFrameMonsterChasingManager : MonoBehaviour,
 
     void Start()
     {
+        GameManager.Instance.MaximumLives = 0;
+        GameManager.Instance.CurrentLives = 0;
         _LastPlayerTras = LevelManager.Instance.Players[0].transform.position;
         _lastPosition = cam.transform.position;
         _windowsX = Screen.currentResolution.width / 3;
@@ -54,7 +56,7 @@ public class iFrameMonsterChasingManager : MonoBehaviour,
         uniWindowController.windowSize = new Vector2(_windowsX + 100, _windowsY + 50);
         _initPos = new Vector2(0, Screen.currentResolution.height / 2 - (_windowsY / 2) );
         uniWindowController.windowPosition = _initPos;
-        MMSoundManager.Instance.SetVolumeSfx(0.2f);
+        MMSoundManager.Instance.SetVolumeSfx(0.5f);
         // uniWindowController.alphaValue = 0.5f;
     }
 

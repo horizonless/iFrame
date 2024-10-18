@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using MoreMountains.CorgiEngine;
 using MoreMountains.Tools;
 using UnityEngine;
 
@@ -14,8 +15,10 @@ public class iFrameForestManager : MonoBehaviour
     void Start()
     {
 	    Debug.Log("play anim");
-        MMSoundManager.Instance.SetVolumeSfx(0.2f);
+        MMSoundManager.Instance.SetVolumeSfx(0.5f);
         startAnim.gameObject.SetActive(true);
+        GameManager.Instance.MaximumLives = 0;
+        GameManager.Instance.CurrentLives = 0;
     }
 
     // Update is called once per frame

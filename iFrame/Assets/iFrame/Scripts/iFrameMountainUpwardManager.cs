@@ -40,7 +40,9 @@ MMEventListener<CorgiEngineEvent>
     {
         // Screen.fullScreen = true;
         uniWindowController.shouldFitMonitor = true;
-        MMSoundManager.Instance.SetVolumeSfx(0.2f);
+        MMSoundManager.Instance.SetVolumeSfx(0.5f);
+        GameManager.Instance.MaximumLives = 0;
+        GameManager.Instance.CurrentLives = 0;
         // uniWindowController.isZoomed = true;
     }
 

@@ -2118,6 +2118,7 @@ MonoBehaviour:
   uniWindowController: {fileID: 1090866556}
   block: {fileID: 1725230035}
   npc: {fileID: 816256223}
+  FinishLevel: {fileID: 2057143779}
 --- !u!4 &229703544
 Transform:
   m_ObjectHideFlags: 0
@@ -2463,7 +2464,7 @@ MonoBehaviour:
     onExecute:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1697003744}
+        - m_Target: {fileID: 229703543}
           m_TargetAssemblyTypeName: iFrameChurchOutsideManager, Assembly-CSharp
           m_MethodName: PuzzleOneEight
           m_Mode: 1
@@ -2479,7 +2480,7 @@ MonoBehaviour:
     onExecute:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1697003744}
+        - m_Target: {fileID: 229703543}
           m_TargetAssemblyTypeName: iFrameChurchOutsideManager, Assembly-CSharp
           m_MethodName: PuzzleOneTwo
           m_Mode: 1
@@ -2495,7 +2496,7 @@ MonoBehaviour:
     onExecute:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1697003744}
+        - m_Target: {fileID: 229703543}
           m_TargetAssemblyTypeName: iFrameChurchOutsideManager, Assembly-CSharp
           m_MethodName: PuzzleOneThree
           m_Mode: 1
@@ -2511,7 +2512,7 @@ MonoBehaviour:
     onExecute:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1697003744}
+        - m_Target: {fileID: 229703543}
           m_TargetAssemblyTypeName: iFrameChurchOutsideManager, Assembly-CSharp
           m_MethodName: PuzzleOneFinished
           m_Mode: 1
@@ -2543,7 +2544,7 @@ MonoBehaviour:
     onExecute:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1697003744}
+        - m_Target: {fileID: 229703543}
           m_TargetAssemblyTypeName: iFrameChurchOutsideManager, Assembly-CSharp
           m_MethodName: PuzzleOneStart
           m_Mode: 1
@@ -5973,11 +5974,6 @@ PrefabInstance:
     - target: {fileID: 7258094619286603376, guid: 666eb818c1218794b91949aa2319d2fe,
         type: 3}
       propertyPath: UnlimitedActivations
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7258094619286603376, guid: 666eb818c1218794b91949aa2319d2fe,
-        type: 3}
-      propertyPath: MaxNumberOfActivations
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7366839685469271572, guid: 666eb818c1218794b91949aa2319d2fe,
@@ -28282,6 +28278,7 @@ MonoBehaviour:
   uniWindowController: {fileID: 1090866556}
   block: {fileID: 1725230035}
   npc: {fileID: 816256223}
+  FinishLevel: {fileID: 0}
 --- !u!4 &1715830351 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4805721340414198, guid: ffec0248e1f5545b7add5c7354363eb5,
@@ -34377,6 +34374,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 668215903}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2057143779 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114922195585570960, guid: e1ead83d3be514e2086688375a354814,
+    type: 3}
+  m_PrefabInstance: {fileID: 1642922914}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4c822b1b53284c0cbf5df2450a0c59c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2075139095
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34561,7 +34570,7 @@ Transform:
   m_GameObject: {fileID: 1406814929709131214}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.0199966, y: -7.3999996, z: -7.9296875}
+  m_LocalPosition: {x: -3.7060623, y: -7.4000015, z: -7.9296875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

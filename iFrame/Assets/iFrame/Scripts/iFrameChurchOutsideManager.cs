@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Kirurobo;
+using MoreMountains.CorgiEngine;
 using UnityEngine;
 
 public class iFrameChurchOutsideManager : MonoBehaviour
@@ -15,12 +16,15 @@ public class iFrameChurchOutsideManager : MonoBehaviour
     private bool _isThree;
     public GameObject block;
     public GameObject npc;
+    public FinishLevel FinishLevel;
     void Start()
     {
         // uniWindowController.forceWindowed = true;
         // uniWindowController.shouldFitMonitor = true;
         uniWindowController.windowSize = new Vector2(Screen.currentResolution.width, Screen.currentResolution.height);
         uniWindowController.windowPosition = Vector2.zero;
+        GameManager.Instance.MaximumLives = 0;
+        GameManager.Instance.CurrentLives = 0;
     }
 
     public void PuzzleOneStart()
@@ -60,10 +64,12 @@ public class iFrameChurchOutsideManager : MonoBehaviour
     {
         if (_isEight && _isTwo && _isThree)
         {
+            FinishLevel.GoToNextLevel();
             Debug.Log("pass");
             //pass
             block.gameObject.SetActive(false);
             npc.gameObject.SetActive(false);
+            LevelManager.Instance.Players[0].GetComponent<iFrameCharacterControl>().WalkFeedBack.PlayFeedbacks();
             return;
         }
 

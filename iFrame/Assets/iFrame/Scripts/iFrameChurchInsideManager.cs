@@ -29,7 +29,8 @@ public class iFrameChurchInsideManager : MonoBehaviour
         // StandaloneFileBrowser.OpenFilePanel("Open File", "", "", false));
         // StandaloneFileBrowser.OpenFolderPanel("Select Folder", Path.Combine(Application.streamingAssetsPath, "TheTruth"), true);
         MMSoundManager.Instance.SetVolumeSfx(0.2f);
-        System.Diagnostics.Process.Start(Path.Combine(Application.streamingAssetsPath, "TheTruth"));
+        GameManager.Instance.MaximumLives = 0;
+        GameManager.Instance.CurrentLives = 0;
     }
 
     // Update is called once per frame
@@ -111,17 +112,24 @@ public class iFrameChurchInsideManager : MonoBehaviour
         _isTalked = true;
         nextNPCName = "me";
     }
-    
-    public async void OnMeFinished()
+
+    public void IamYOu()
     {
-        //end of the game!!!!!!
         rectMeGO = LevelManager.Instance.Players[0].GetComponent<RectMeGetter>().mySpriteGO;
         rectMeGO.GetComponent<Animator>().enabled = false;
         rectMeGO.GetComponent<SpriteRenderer>().sprite = meSprite;
         rectMeGO.GetComponent<SpriteRenderer>().flipX = true;
         rectMeGO.GetComponent<Transform>().localScale = new Vector3(3,3,0.3f);
-        await Task.Delay(3000);
+    }
+
+    public void OnMeFinished()
+    {
         finAnim.gameObject.SetActive(true);
     }
-    
+
+    public void ShowTheTruth()
+    {
+        System.Diagnostics.Process.Start(Path.Combine(Application.streamingAssetsPath, "TheTruth"));
+    }
+
 }

@@ -134,3 +134,7 @@ maybe save and load and new game option?
 maybe new character animation? instead of corgi no time though
 !!! must !! 最后一天了不做完不睡觉。。拖动重合的解密！！！最好的解密。
 和边框拖动的解密
+
+开场文字错别字 开场窗口大小
+开场文字格式竖排
+
