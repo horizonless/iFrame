@@ -175,7 +175,17 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 8820706089881272920}
+    - targetCorrespondingSourceObject: {fileID: 119040, guid: eaa0c32df7aae4121befb930bd401b9a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5752543095191977433}
   m_SourcePrefab: {fileID: 100100000, guid: eaa0c32df7aae4121befb930bd401b9a, type: 3}
+--- !u!1 &2200270872929888940 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6707816943335508271, guid: eaa0c32df7aae4121befb930bd401b9a,
+    type: 3}
+  m_PrefabInstance: {fileID: 4872364058634085251}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4872364058633974403 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 119040, guid: eaa0c32df7aae4121befb930bd401b9a,
@@ -202,3 +212,16 @@ MonoBehaviour:
   BlockingWeaponStates: 
   DownwardsRaycastLength: 5
   OnlyWhenGrounded: 0
+--- !u!114 &5752543095191977433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4872364058633974403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71f59fe864c273c4cb67779fe1d9c033, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mySpriteGO: {fileID: 2200270872929888940}

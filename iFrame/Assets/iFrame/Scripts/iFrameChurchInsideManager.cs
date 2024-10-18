@@ -2,16 +2,23 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using MoreMountains.CorgiEngine;
 using MoreMountains.Tools;
 using SFB;
 using UnityEngine;
 
 public class iFrameChurchInsideManager : MonoBehaviour
 {
-    public Collider2D topCollider;
+    public GameObject meGO;
+    public GameObject forestGO;
+    public GameObject demonGO;
     public GameObject dragonGO;
+    public GameObject skeleGo;
     public GameObject churchMasterGO;
     public GameObject blockGO;
+
+    public GameObject rectMeGO;
+    public Sprite meSprite;
     // Start is called before the first frame update
     private string nextNPCName = String.Empty;
     private bool _isTalked;
@@ -41,15 +48,34 @@ public class iFrameChurchInsideManager : MonoBehaviour
         if (_isTalked)
         {
             _isTalked = false;
-            if (nextNPCName == String.Empty)
+            if (nextNPCName == "skele")
             {
                 churchMasterGO.SetActive(false);
+                skeleGo.SetActive(true);
+            }
+            
+            if (nextNPCName == "dragon")
+            {
+                skeleGo.SetActive(false);
                 dragonGO.SetActive(true);
             }
 
-            if (nextNPCName == "dragon")
+            if (nextNPCName == "demon")
             {
-                dragonGO.SetActive(true);
+                dragonGO.SetActive(false);
+                demonGO.SetActive(true);
+            }
+            
+            if (nextNPCName == "forest")
+            {
+                demonGO.SetActive(false);
+                forestGO.SetActive(true);
+            }
+            
+            if (nextNPCName == "me")
+            {
+                forestGO.SetActive(false);
+                meGO.SetActive(true);
             }
         }
 
@@ -58,12 +84,41 @@ public class iFrameChurchInsideManager : MonoBehaviour
     public void OnChurchMasterFinished()
     {
         _isTalked = true;
-        nextNPCName = "dragon";
+        nextNPCName = "skele";
     }
     
+    public void OnSkeleFinished()
+    {
+        _isTalked = true;
+        nextNPCName = "dragon";
+    }
     public void OnDragonFinished()
     {
         _isTalked = true;
-        nextNPCName = "";
+        nextNPCName = "demon";
     }
+    
+    public void OnDemonFinished()
+    {
+        _isTalked = true;
+        nextNPCName = "forest";
+    }
+    
+    public void OnForestFinished()
+    {
+        _isTalked = true;
+        nextNPCName = "me";
+    }
+    
+    public void OnMeFinished()
+    {
+        //end of the game!!!!!!
+        rectMeGO = LevelManager.Instance.Players[0].GetComponent<RectMeGetter>().mySpriteGO;
+        rectMeGO.GetComponent<Animator>().enabled = false;
+        rectMeGO.GetComponent<SpriteRenderer>().sprite = meSprite;
+        rectMeGO.GetComponent<SpriteRenderer>().flipX = true;
+        rectMeGO.GetComponent<Transform>().localScale = new Vector3(3,3,0.3f);
+        
+    }
+    
 }
