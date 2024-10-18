@@ -21,6 +21,8 @@ public class iFrameChurchOutsideManager : MonoBehaviour
     {
         // uniWindowController.forceWindowed = true;
         // uniWindowController.shouldFitMonitor = true;
+        uniWindowController.isTransparent = false;
+        // uniWindowController.isTransparent = false
         uniWindowController.windowSize = new Vector2(Screen.currentResolution.width, Screen.currentResolution.height);
         uniWindowController.windowPosition = Vector2.zero;
         GameManager.Instance.MaximumLives = 0;

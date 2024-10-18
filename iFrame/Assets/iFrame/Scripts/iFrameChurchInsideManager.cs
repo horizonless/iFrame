@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
+using Kirurobo;
 using MoreMountains.CorgiEngine;
 using MoreMountains.Tools;
 using SFB;
@@ -21,6 +22,8 @@ public class iFrameChurchInsideManager : MonoBehaviour
     public GameObject rectMeGO;
     public Sprite meSprite;
     public GameObject finAnim;
+
+    public UniWindowController uniWindowController;
     // Start is called before the first frame update
     private string nextNPCName = String.Empty;
     private bool _isTalked;
@@ -28,6 +31,7 @@ public class iFrameChurchInsideManager : MonoBehaviour
     {
         // StandaloneFileBrowser.OpenFilePanel("Open File", "", "", false));
         // StandaloneFileBrowser.OpenFolderPanel("Select Folder", Path.Combine(Application.streamingAssetsPath, "TheTruth"), true);
+        uniWindowController.shouldFitMonitor = true;
         MMSoundManager.Instance.SetVolumeSfx(0.2f);
         GameManager.Instance.MaximumLives = 0;
         GameManager.Instance.CurrentLives = 0;
@@ -130,6 +134,8 @@ public class iFrameChurchInsideManager : MonoBehaviour
     public void ShowTheTruth()
     {
         System.Diagnostics.Process.Start(Path.Combine(Application.streamingAssetsPath, "TheTruth"));
+        uniWindowController.isTransparent = true;
+        uniWindowController.alphaValue = 0.9f;
     }
 
 }
