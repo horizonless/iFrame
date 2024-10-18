@@ -42,6 +42,7 @@ public class iFrameDungeonCaveManager : MonoBehaviour
     
     public void OnEnterExitRoom()
     {
+        cursorPuzzleGO.SetActive(false);
         LevelManager.Instance.Players[0].GetComponent<CharacterGroundNormalGravity>().enabled = true;
         LevelManager.Instance.Players[0].GetComponent<CorgiController>().StickToSlopes = false;
         eggBG.SetActive(true);
