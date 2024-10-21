@@ -78,7 +78,7 @@ MMEventListener<CorgiEngineEvent>
         var delta = cam.transform.position - _lastPosition;
         _lastPosition = cam.transform.position;
         // Debug.Log("delta:" + delta);
-        uniWindowController.windowPosition += new Vector2(delta.x * 100, delta.y * 50);
+        uniWindowController.windowPosition += new Vector2(delta.x * 100, delta.y * 20);
         // Debug.Log("ScreenSize w:" + Screen.width + " h:" + Screen.height + "current x:" + uniWindowController.windowPosition.x + " Client size x:" + uniWindowController.clientSize.x);
     }
 
